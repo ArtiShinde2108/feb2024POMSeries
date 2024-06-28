@@ -21,7 +21,7 @@ import io.qameta.allure.SeverityLevel;
 @Listeners({ ExtentReportListener.class, TestAllureListener.class, AnnotationTransformer.class })
 public class LoginPageTest extends BaseTest {
 
-	@Description("Checking login page title----")
+	@Description("Checking login page title test----")
 	@Severity(SeverityLevel.MINOR)
 	@Owner("Naveen Automation Labs")
 	@Issue("Login 123")
