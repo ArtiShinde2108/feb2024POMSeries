@@ -27,7 +27,7 @@
 		</classes>
 	</test>
 	
-	<!-- <test name="ProductInfo Page Test">
+	 <test name="ProductInfo Page Test">
 		
 		<classes>
 			<class name ="com.qa.opencart.tests.ProductInfoPageTest" />
