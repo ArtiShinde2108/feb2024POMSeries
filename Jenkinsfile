@@ -44,7 +44,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/ArtiShinde2108/feb2024POMSeries.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/runners/regression.xml"
+                    sh "mvn clean install"
                     
                 }
             }
@@ -88,7 +88,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/ArtiShinde2108/feb2024POMSeries.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/runners/sanity.xml"
+                    sh "mvn clean install"
                     
                 }
             }
