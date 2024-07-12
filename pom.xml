@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>Feb2024POMSeries</groupId>
-  <artifactId>Feb2024POMSeries</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+	<groupId>Feb2024POMSeries</groupId>
+	<artifactId>Feb2024POMSeries</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
-  <name>Feb2024POMSeries</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+	<name>Feb2024POMSeries</name>
+	<!-- FIXME change it to the project's website -->
+	<url>http://www.example.com</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <extentreports-version>5.0.8</extentreports-version>
-    <aspectj.version>1.9.19</aspectj.version>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<extentreports-version>5.0.8</extentreports-version>
+		<aspectj.version>1.9.19</aspectj.version>
+	</properties>
 
-  <dependencies>
-   
-   <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>4.19.1</version>
-   </dependency>
-   
-   <dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.10.2</version>
-   </dependency>
-   
-   <dependency>
+	<dependencies>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.19.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.10.2</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>3.9</version>
@@ -72,13 +73,13 @@
 			<artifactId>opencsv</artifactId>
 			<version>5.9</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>${extentreports-version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
 			<artifactId>allure-testng</artifactId>
@@ -91,14 +92,12 @@
 			<version>${aspectj.version}</version>
 		</dependency>
 
-   
 
-   
-  </dependencies>
+	</dependencies>
 
-  <build>
-	  
-	  <plugins>
+	<build>
+
+		<plugins>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -109,8 +108,8 @@
 					<target>11</target>
 				</configuration>
 			</plugin>
-			
-			
+
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -120,17 +119,18 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-						<!-- <suiteXmlFile>src/resources/runners/regression.xml</suiteXmlFile>-->
-						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile> 
+						<!--
+						<suiteXmlFile>src/resources/runners/regression.xml</suiteXmlFile>-->
+						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
-					
+
 					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 					</argLine>
-					
-					
+
+
 				</configuration>
-				
+
 				<dependencies>
 					<dependency>
 						<groupId>org.aspectj</groupId>
@@ -138,10 +138,10 @@
 						<version>${aspectj.version}</version>
 					</dependency>
 				</dependencies>
-				
+
 			</plugin>
-			
-	</plugins>		
-    
-  </build>
+
+		</plugins>
+
+	</build>
 </project>
